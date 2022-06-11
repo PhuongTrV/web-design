@@ -1,0 +1,128 @@
+*{
+	margin: 0 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	overflow-x: hidden;
+}
+.tieude{
+	font-size: 48px;
+	font-weight: bold;
+	color: #66fcf1;
+	height: 450px;
+	text-align: center;
+	background-image: linear-gradient(to bottom, #662d8c 100%, #ed1e79 100%);
+	position: relative;
+	padding-top: 100px;
+}
+.gioithieu{
+	position: relative;
+	overflow: visible;
+	height: 500px;
+	background: #85dcb0;
+	padding: 100px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.gioithieu::before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 70px solid #1a5d8d;
+    border-left: 100vw solid transparent;
+    border-top: 0 solid transparent;
+    left: 0;
+    top: -70px;
+}
+.gioithieu::after{
+	position: absolute;
+	content: "";
+	border-left: solid 100vw #1a5d8d;
+	border-bottom: solid 70px transparent;
+	left: 0px;
+	top: 0px;
+}
+.gioithieu>p{
+	max-width: 900px;
+	justify-content: center;
+	color: #fff;
+	font-size: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+.slides{
+	height: 90vh;
+	width: 100vw;
+	background: #7aabc3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bg2{
+	display: flex;
+	flex: inherit;
+	height: 80%;
+	width: 80%;
+	border: white solid 5px;
+	border-top-left-radius:70px;
+	border-bottom-right-radius:70px;
+}
+.chuc{
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #f7ece1;
+}
+.footer{
+	background-color: #3b3759;
+	color: white;
+}
+.mess{
+	height: 400px;
+	width: 320px;
+	position: fixed;
+	bottom: 0px;
+	right: 40px;
+	/*background: #8d86c9;*/
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(255,255,255,0.8);
+	box-shadow: -2px 10px 40px rgba(90,92,92,0.4);
+
+
+}
+.messheader{
+	height: 48px;
+	border-bottom: 1px solid #ccc;
+}
+.messbody{
+	flex-grow: 1;
+}
+.messfooter{
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.messfooter input{
+	height: 42px;
+	width: 90%;
+	border-radius: 21px;
+	margin: 10px 20px;
+	border: 1px solid #ccc;
+	background: none;
+	padding-left: 10px;
+}
+.messfooter button{
+	position: absolute;
+	right: 28px;
+	border: none;
+	background: none;
+	color: #4A90E2;
+	font-size: 12px;
+	text-transform: uppercase;
+}
