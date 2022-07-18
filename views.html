@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phuong's web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/logo.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<section class="container">
+	<header class="header">
+		<div class="logo">
+			<a><img src="images/logo.png" alt="logo" height="80px"></a>
+		</div>
+		<div class="menu">
+			<a href="#">Điện tử</a>
+			<a href="#">Web</a>
+			<a href="#">Văn học</a>
+			<a href="#">Thông tin</a>
+		</div>
+		<div id="clock" onload="showTime()">12:30 PM</div>
+	</header>
+	<div class="content">
+		<div class="block1">
+			<h1>
+				Thiết kế mạch điện</br>
+				<span class="color1">Giá rẻ</span>
+				 - 
+				<span class="color2">Chất lượng</span>
+			</h1>
+		</div>
+		<div class="block2">
+			<div>
+				<p class="maincontent">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<button>Contact now!</button>
+			</div>
+
+		</div>
+		<div class="icon">
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"></a>
+			<a href="#" class="fa fa-google"></a>
+			<a href="#" class="fa fa-youtube"></a>
+			<a href="#" class="fa fa-instagram"></a>
+			<a href="#" class="fa fa-pinterest"></a>
+		</div>
+	</div>
+</section>
+<script type="text/javascript">
+	function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    
+    var time = h + ":" + m + " " + session;
+    document.getElementById("clock").innerText = time;
+    document.getElementById("clock").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+
+showTime();
+</script>
+</body>
+</html>
